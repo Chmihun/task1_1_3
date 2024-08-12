@@ -1,3 +1,4 @@
+import jm.task.core.jdbc.dao.UserDao;
 import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.service.UserService;
 import jm.task.core.jdbc.service.UserServiceImpl;
@@ -12,12 +13,13 @@ public class UserServiceTest {
     private final String testName = "Ivan";
     private final String testLastName = "Ivanov";
     private final byte testAge = 5;
+    private static UserDao userDao;
 
 
     @Test
     public void dropUsersTable() {
         try {
-            userService.dropUsersTable();
+//            userService.dropUsersTable();
             userService.dropUsersTable();
         } catch (Exception e) {
             Assert.fail("При тестировании удаления таблицы произошло исключение\n" + e);
@@ -27,8 +29,9 @@ public class UserServiceTest {
     @Test
     public void createUsersTable() {
         try {
-            userService.dropUsersTable();
+//            userService.dropUsersTable(); //вернуть!!!
             userService.createUsersTable();
+
         } catch (Exception e) {
             Assert.fail("При тестировании создания таблицы пользователей произошло исключение\n" + e.getMessage());
         }
