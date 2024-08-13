@@ -19,7 +19,6 @@ public class UserServiceTest {
     @Test
     public void dropUsersTable() {
         try {
-//            userService.dropUsersTable();
             userService.dropUsersTable();
         } catch (Exception e) {
             Assert.fail("При тестировании удаления таблицы произошло исключение\n" + e);
@@ -29,7 +28,7 @@ public class UserServiceTest {
     @Test
     public void createUsersTable() {
         try {
-//            userService.dropUsersTable(); //вернуть!!!
+            userService.dropUsersTable();
             userService.createUsersTable();
 
         } catch (Exception e) {
@@ -79,7 +78,7 @@ public class UserServiceTest {
             List<User> userList = userService.getAllUsers();
 
             if (userList.size() != 1) {
-                Assert.fail("Проверьте корректность работы метода сохранения пользователя/удаления или создания таблицы");
+                Assert.fail("Не корректная метода сохранения пользователя/удаления или создания таблицы");
             }
         } catch (Exception e) {
             Assert.fail("При попытке достать всех пользователей из базы данных произошло исключение\n" + e);

@@ -11,10 +11,10 @@ public class Main {
 
         userDao.createUsersTable();
 
-        userDao.saveUser("John", "Doe", (byte) 25);
-        userDao.saveUser("Jane", "Smith", (byte) 30);
-        userDao.saveUser("Mike", "Brown", (byte) 40);
-        userDao.saveUser("Anna", "White", (byte) 20);
+        userDao.saveUser("Iurii", "Gagarin", (byte) 34);
+        userDao.saveUser("German", "Titov", (byte) 65);
+        userDao.saveUser("Andrean", "Nikolaev", (byte) 75);
+        userDao.saveUser("Valentina", "Tereshkova", (byte) 87);
 
         for (User user : userDao.getAllUsers()) {
             System.out.println(user);
