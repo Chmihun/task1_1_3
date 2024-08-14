@@ -13,7 +13,6 @@ public class UserServiceTest {
     private final String testName = "Ivan";
     private final String testLastName = "Ivanov";
     private final byte testAge = 5;
-    private static UserDao userDao;
 
 
     @Test
